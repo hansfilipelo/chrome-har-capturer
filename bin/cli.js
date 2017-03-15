@@ -16,7 +16,7 @@ program
     .option('-g, --give-up <s>', 'time to wait before giving up')
     .option('-f, --force', 'continue even without benchmarking extension')
     .option('-v, --verbose', 'enable verbose output on stderr')
-    .option('-n, --no-blank', 'Do not load about:blank between page-loads.')
+    .option('-n, --neutral-url <url>', 'Load this page insteadl of about:blank between page-loads.')
     .parse(process.argv);
 
 if (program.args.length === 0) {
@@ -34,7 +34,7 @@ var c = chc.load(urls, {
     'onLoadDelay': program.delay,
     'giveUpTime': program.giveUp,
     'force': program.force,
-    'noBlank': program.noBlank
+    'neutralUrl': program.neutralUrl
 });
 
 if (program.verbose) {
