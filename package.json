@@ -19,6 +19,7 @@
     "dependencies": {
         "chrome-remote-interface": "0.x.x",
         "commander": "2.x.x",
-        "colors": "1.x.x"
+        "colors": "1.x.x",
+        "system-sleep": "latest"
     }
 }
